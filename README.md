@@ -17,8 +17,8 @@
 |------|----|-------|
 |image|text||
 |text|text||
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|integer|null: false, foreign_key: true|
+|group|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
@@ -35,8 +35,13 @@
 ## users_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|users_id|integer|null: false, foreign_key: true|
-|groups_id|integer|null: false, foreign_key: true|
+|user|integer|null: false, foreign_key: true|
+|group|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
+
+## reference型を使用
+  下記をマイグレーションファイルに追加して作成
+  t.references :user, foreign_key: true
+  t.references :group, foreign_key: true
