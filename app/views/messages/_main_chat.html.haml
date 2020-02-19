@@ -1,0 +1,38 @@
+.chat-main
+  .chat-main__group-info
+    .current-group
+      %p test
+      .member-name
+        %p Member:ebuchi
+    .edit-btn
+      %a(href="#")Edit
+  .chat-main__message-list
+    .message-box
+      .message-box__name
+        %p Ebuchi
+        .message-box__text
+          %p こんちわ
+      .message-box__date
+        %p 2020/02/18
+    .message-box
+      .message-box__name
+        %p Ebuchi
+        .message-box__text
+          %p こんちわ
+      .message-box__date
+        %p 2020/02/18
+    .message-box
+      .message-box__name
+        %p Ebuchi
+        .message-box__text
+          %p こんちわ
+      .message-box__date
+        %p 2020/02/18
+  .chat-main__message-form
+    .new-message
+      .input-box
+        %input.input-box__text{:name => "text", :placeholder => "type a message", :type => "text", :value => ""}/
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input.input-box__image__file{type: "file"}
+      %input.submit-btn{:type => "submit", :name => "commit", :value => "Send"}/
