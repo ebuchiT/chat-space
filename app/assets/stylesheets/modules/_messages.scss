@@ -48,6 +48,7 @@
     height: calc(100vh - 100px);
     .group-box{
       height: 91px;
+      text-decoration: none;
       &__name{
         padding: 20px 20px 5px 20px;
         font-size: 15px;
@@ -100,6 +101,7 @@
   &__message-list{
     height: calc(100vh - 190px);
     background-color: #fafafa;
+    text-decoration: none;
     .message-box{
       height: 110px;
       padding-top: 35px;
