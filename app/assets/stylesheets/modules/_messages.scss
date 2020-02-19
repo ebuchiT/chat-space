@@ -29,11 +29,16 @@
         font-size: 16px;
       }
       &__icons{
-        color: white;
         line-height: 20px;
         padding-left: 5px;
-        .edit.btn{
+        .edit-icon{
           padding-right: 5px;
+          color: white;
+          text-decoration: none;
+        }
+        .config-icon{
+          color: white;
+          text-decoration: none;
         }
       }
     }
@@ -88,6 +93,7 @@
       margin-top: 28px;
       a {
         text-decoration: none;
+        color: #38aef0;
       }
     }
   }

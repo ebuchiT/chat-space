@@ -4,8 +4,10 @@
       .top-items__name
         %p NAME
       .top-items__icons
-        %i.far.fa-edit.edit.btn
-        %i.fa.fa-cog.config.btn
+        =link_to "#", class:"edit-icon" do
+          = icon("fas", "edit")
+        =link_to "#", class:"config-icon" do
+          = icon("fas", "cog")
   .side-bar__group-list
     .group-box
       .group-box__name
