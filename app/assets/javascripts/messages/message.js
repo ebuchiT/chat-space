@@ -64,13 +64,15 @@ $('#new_message').on('submit', function(e){
    contentType: false
  })
   .done(function(data){
-    var html = buildHTML(data);
-    $('.message-box').append(html);      
-    $('form')[0].reset();
-    $('.chat-main__message-list').animate({ scrollTop: $('.message-box')[0].scrollHeight});
-    $('.submit-btn').prop('disabled', false);
+    if (messages.length !== 0) {
+      var insertHTML = '';
+      $.each(messages, function(i, message) {
+        insertHTML += buildHTML(message)
+      });
+      $('.messages').append(insertHTML);
+      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+    }  
   })
-
   .fail(function() {
     alert("メッセージ送信に失敗しました");
 });
