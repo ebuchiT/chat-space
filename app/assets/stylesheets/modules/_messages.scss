@@ -46,6 +46,7 @@
   &__group-list{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
+    overflow: scroll;
     .group-box{
       height: 91px;
       text-decoration: none;
@@ -104,7 +105,6 @@
     text-decoration: none;
     overflow: scroll;
     .message{
-      height: 110px;
       padding-top: 35px;
       padding-left: 40px;
       .upper-message{
@@ -120,12 +120,15 @@
           font-size: 12px;
         }
       }
-      .lower-message{  
+      .lower-message{
         .lower-message__content{
           color: #434A54;
           font-size: 14px;
-          padding-bottom: 46px;
+          padding-bottom: 20px;
           padding-top: 12px;
+        }
+        .lower-message__image{
+          padding-top: 20px;
         }
       }
     }
